@@ -17,6 +17,7 @@
   "license": "ISC",
   "peerDependencies": {},
   "devDependencies": {
+    "ap-utils-test": "0.0.12",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.3",
