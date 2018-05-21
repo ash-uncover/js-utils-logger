@@ -1,0 +1,27 @@
+{
+  "name": "ap-utils-logger",
+  "version": "0.0.1",
+  "description": "javascript logger",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ash-uncover/ap-utils-logger"
+  },
+  "author": "aSH <ash.uncover@gmail.com>",
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.4.3"
+  },
+  "dependencies": {}
+}
