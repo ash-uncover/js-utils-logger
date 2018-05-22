@@ -1,6 +1,6 @@
 {
   "name": "ap-utils-logger",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "javascript logger",
   "main": "dist/index.js",
   "scripts": {

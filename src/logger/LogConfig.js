@@ -1,4 +1,4 @@
-import LOG_LEVELS from 'logger/LogLevels'
+import LOG_LEVELS from './LogLevels'
 
 class LogConfig {
     

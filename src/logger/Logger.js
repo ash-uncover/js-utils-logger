@@ -1,7 +1,7 @@
 /* eslint no-console: 0 */
 
-import LOG_LEVELS from 'logger/LogLevels'
-import LOG_CONFIG from 'logger/LogConfig'
+import LOG_LEVELS from './LogLevels'
+import LOG_CONFIG from './LogConfig'
 
 export default class Logger {
 
