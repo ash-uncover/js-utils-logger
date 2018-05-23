@@ -22,5 +22,9 @@ describe('loggers', () => {
         test('is properly defined', () => {
             expect(Logger).toBeDefined()
         })
+        test('can be instanciated', () => {
+            const LOGGER = new Logger('myLogger')
+            expect(LOGGER).toBeDefined()
+        })
     })
 })
