@@ -1,4 +1,5 @@
-import { Logger, LOG_CONFIG, LOG_LEVELS } from 'index'
+import { LOG_CONFIG, LOG_LEVELS } from 'index'
+import Logger from 'index'
 
 describe('loggers', () => {
 
