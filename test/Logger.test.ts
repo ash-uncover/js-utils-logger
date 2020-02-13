@@ -1,6 +1,6 @@
 import LogConfig from '../src/LogConfig'
 import LogLevels from '../src/LogLevels'
-import Logger from '../src/Logger'
+import Logger from '../src'
 
 describe('Logger', () => {
   let warnSpy: jest.SpyInstance
