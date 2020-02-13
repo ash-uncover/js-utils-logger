@@ -1,6 +1,6 @@
 {
   "name": "ap-utils-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "aSH <ash.uncover@gmail.com>",
   "description": "javascript logger",
   "license": "ISC",
