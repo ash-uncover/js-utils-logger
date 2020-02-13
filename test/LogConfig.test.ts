@@ -1,5 +1,4 @@
-import LogConfig from '../src/LogConfig'
-import LogLevels from '../src/LogLevels'
+import { LogConfig, LogLevels } from '../src'
 
 describe('LogConfig', () => {
 

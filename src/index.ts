@@ -1,5 +1,3 @@
-export * from './LogConfig'
-export * from './Logger'
-export * from './LogLevels'
-
+export { default as LogConfig } from './LogConfig'
+export { default as LogLevels } from './LogLevels'
 export { default } from './Logger'
