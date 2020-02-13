@@ -4,7 +4,6 @@ import LogLevels from './LogLevels'
 import LogConfig from './LogConfig'
 
 export default class Logger {
-
   private _name: string
   private _level: LogLevels
 
