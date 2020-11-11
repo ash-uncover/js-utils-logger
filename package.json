@@ -28,7 +28,6 @@
   "devDependencies": {
     "@types/jest": "latest",
     "@types/node": "latest",
-    "ap-utils-test": "latest",
     "jest": "latest",
     "prettier": "latest",
     "ts-jest": "latest",
