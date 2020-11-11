@@ -6,7 +6,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ash-uncover/ap-utils-logger"
+    "url": "https://github.com/ash-uncover/js-utils-logger"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
