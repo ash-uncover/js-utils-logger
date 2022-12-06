@@ -1,23 +1,25 @@
 /* tslint:disable:no-console */
 
-import LogLevels from './LogLevels'
+import LogLevels, { LogLevel } from './LogLevels'
 import LogConfig from './LogConfig'
 
 export default class Logger {
-  private _name: string
-  private _level: LogLevels
 
-  constructor(name: string = 'Logger', level: LogLevels = LogLevels.ERROR) {
-    this._name = name
-    this._level = level
+  // attributes
+  #name: string
+  #level: LogLevel
+
+  constructor(name: string = 'Logger', level: LogLevel = LogLevels.ERROR) {
+    this.#name = name
+    this.#level = level
   }
 
   get name() {
-    return this._name
+    return this.#name
   }
 
   get level() {
-    return LogConfig.level() || this._level
+    return LogConfig.level() || this.#level
   }
 
   message(msg: string) {

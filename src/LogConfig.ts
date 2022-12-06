@@ -1,28 +1,28 @@
-import LogLevels from './LogLevels'
+import LogLevels, { LogLevel } from './LogLevels'
 
-let LogLevel: LogLevels | null = null
+let level: LogLevel | null = null
 
 const LogConfig = {
   level: () => {
-    return LogLevel
+    return level
   },
   reset: () => {
-    LogLevel = null
+    level = null
   },
   off: () => {
-    LogLevel = LogLevels.OFF
+    level = LogLevels.OFF
   },
   debug: () => {
-    LogLevel = LogLevels.DEBUG
+    level = LogLevels.DEBUG
   },
   info: () => {
-    LogLevel = LogLevels.INFO
+    level = LogLevels.INFO
   },
   warn: () => {
-    LogLevel = LogLevels.WARN
+    level = LogLevels.WARN
   },
   error: () => {
-    LogLevel = LogLevels.ERROR
+    level = LogLevels.ERROR
   }
 }
 
