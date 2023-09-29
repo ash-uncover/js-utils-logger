@@ -1,9 +1,13 @@
 /* tslint:disable:no-console */
+import {
+  LogLevels,
+  LogLevel
+} from './LogLevels'
+import {
+  LogConfig
+} from './LogConfig'
 
-import LogLevels, { LogLevel } from './LogLevels'
-import LogConfig from './LogConfig'
-
-export default class Logger {
+export class Logger {
 
   // attributes
   #name: string
@@ -19,7 +23,7 @@ export default class Logger {
   }
 
   get level() {
-    return LogConfig.level() || this.#level
+    return LogConfig.level || this.#level
   }
 
   message(msg: string) {

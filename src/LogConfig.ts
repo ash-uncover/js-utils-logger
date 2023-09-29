@@ -1,29 +1,40 @@
-import LogLevels, { LogLevel } from './LogLevels'
+import {
+  LogLevels,
+  LogLevel
+} from './LogLevels'
 
-let level: LogLevel | null = null
+class LogConfigClass {
 
-const LogConfig = {
-  level: () => {
-    return level
-  },
-  reset: () => {
-    level = null
-  },
-  off: () => {
-    level = LogLevels.OFF
-  },
-  debug: () => {
-    level = LogLevels.DEBUG
-  },
-  info: () => {
-    level = LogLevels.INFO
-  },
-  warn: () => {
-    level = LogLevels.WARN
-  },
-  error: () => {
-    level = LogLevels.ERROR
+  // Attributes //
+
+  #level: LogLevel | null = null
+
+  // Getters //
+
+  get level () {
+    return this.#level
+  }
+
+  // Methods //
+
+  reset () {
+    this.#level = null
+  }
+  off () {
+    this.#level = LogLevels.OFF
+  }
+  debug () {
+    this.#level = LogLevels.DEBUG
+  }
+  info () {
+    this.#level = LogLevels.INFO
+  }
+  warn () {
+    this.#level = LogLevels.WARN
+  }
+  error () {
+    this.#level = LogLevels.ERROR
   }
 }
 
-export default LogConfig
+export const LogConfig = new LogConfigClass()

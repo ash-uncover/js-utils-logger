@@ -1,4 +1,7 @@
-import Logger, { LogLevels } from '../src'
+import {
+  Logger,
+  LogLevels
+} from '../src'
 
 describe('Logger', () => {
   let warnSpy: jest.SpyInstance
