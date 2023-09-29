@@ -9,10 +9,6 @@ class LogConfigClass {
 
   #level: LogLevel | null = null
 
-  // Constructor //
-
-  constructor() {}
-
   // Getters //
 
   get level () {
