@@ -1,6 +1,6 @@
 export type LogLevel = 0 | 1 | 2 | 3 | 4
 
-const LogLevels: {
+export const LogLevels: {
   DEBUG: LogLevel
   INFO: LogLevel
   WARN: LogLevel
@@ -13,5 +13,3 @@ const LogLevels: {
   ERROR: 3,
   OFF: 4
 }
-
-export default LogLevels
