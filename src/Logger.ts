@@ -1,52 +1,74 @@
 /* tslint:disable:no-console */
 
-import LogLevels, { LogLevel } from './LogLevels'
-import LogConfig from './LogConfig'
+import { LogLevels, LogLevel } from './LogLevels'
+import { LogConfig, GlobalConfig } from './LogConfig'
 
-export default class Logger {
+function checkLevel(logger: Logger, level: LogLevel) {
+  return logger.config.level <= level && GlobalConfig.level <= level
+}
 
-  // attributes
+export class Logger {
+  // #region Attributes
+
   #name: string
-  #level: LogLevel
+  #config: LogConfig
 
-  constructor(name: string = 'Logger', level: LogLevel = LogLevels.ERROR) {
+  // #endregion
+
+  // #region Constructor
+
+  constructor(name: string = 'Logger', config: LogConfig = new LogConfig()) {
     this.#name = name
-    this.#level = level
+    this.#config = config
   }
+
+  // #endregion
+
+  // #region Getters & Setters
 
   get name() {
     return this.#name
   }
 
-  get level() {
-    return LogConfig.level() || this.#level
+  get config() {
+    return this.#config
   }
+
+  get level() {
+    return this.#config.level
+  }
+
+  // #endregion
+
+  // #region Public Methods
 
   message(msg: string) {
     return `${this.name} - ${msg}`
   }
 
   debug(msg: string) {
-    if (this.level <= LogLevels.DEBUG) {
+    if (checkLevel(this, LogLevels.DEBUG)) {
       console.log(this.message(msg))
     }
   }
 
   info(msg: string) {
-    if (this.level <= LogLevels.INFO) {
+    if (checkLevel(this, LogLevels.INFO)) {
       console.log(this.message(msg))
     }
   }
 
   warn(msg: string) {
-    if (this.level <= LogLevels.WARN) {
+    if (checkLevel(this, LogLevels.WARN)) {
       console.warn(this.message(msg))
     }
   }
 
   error(msg: string) {
-    if (this.level <= LogLevels.ERROR) {
+    if (checkLevel(this, LogLevels.ERROR)) {
       console.error(this.message(msg))
     }
   }
+
+  // #endregion
 }

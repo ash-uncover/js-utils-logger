@@ -2,38 +2,58 @@ import { LogConfig, LogLevels } from '../src'
 
 describe('LogConfig', () => {
 
+  let config: LogConfig
+
+  beforeEach(() => {
+    config = new LogConfig()
+  })
+
   describe('constructor', () => {
 
     test('properly initialize object', () => {
-      expect(LogConfig.level()).toBe(null)
+      // Declaration
+      // Execution
+      // Assertion
+      expect(config.level).toBe(LogLevels.ERROR)
     })
   })
 
   describe('levels', () => {
 
-    beforeEach(() => {
-      LogConfig.reset()
-    })
-
     test('can be set to OFF', () => {
-      LogConfig.off()
-      expect(LogConfig.level()).toBe(LogLevels.OFF)
+      // Declaration
+      // Execution
+      config.off()
+      // Assertion
+      expect(config.level).toBe(LogLevels.OFF)
     })
     test('can be set to DEBUG', () => {
-      LogConfig.debug()
-      expect(LogConfig.level()).toBe(LogLevels.DEBUG)
+      // Declaration
+      // Execution
+      config.debug()
+      // Assertion
+      expect(config.level).toBe(LogLevels.DEBUG)
     })
     test('can be set to INFO', () => {
-      LogConfig.info()
-      expect(LogConfig.level()).toBe(LogLevels.INFO)
+      // Declaration
+      // Execution
+      config.info()
+      // Assertion
+      expect(config.level).toBe(LogLevels.INFO)
     })
     test('can be set to WARN', () => {
-      LogConfig.warn()
-      expect(LogConfig.level()).toBe(LogLevels.WARN)
+      // Declaration
+      // Execution
+      config.warn()
+      // Assertion
+      expect(config.level).toBe(LogLevels.WARN)
     })
     test('can be set to ERROR', () => {
-      LogConfig.error()
-      expect(LogConfig.level()).toBe(LogLevels.ERROR)
+      // Declaration
+      // Execution
+      config.error()
+      // Assertion
+      expect(config.level).toBe(LogLevels.ERROR)
     })
   })
 })
