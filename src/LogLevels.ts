@@ -1,4 +1,9 @@
-export type LogLevel = 0 | 1 | 2 | 3 | 4
+export type LogLevel = 
+  | 0 
+  | 1 
+  | 2 
+  | 3 
+  | 4
 
 export const LogLevels: {
   DEBUG: LogLevel

@@ -1,40 +1,56 @@
-import {
-  LogLevels,
-  LogLevel
-} from './LogLevels'
+import { LogLevels, LogLevel } from './LogLevels'
 
-class LogConfigClass {
+export class LogConfig {
+  // #region Attributes
 
-  // Attributes //
+  #level: LogLevel
 
-  #level: LogLevel | null = null
+  // #endregion
 
-  // Getters //
+  // #region Constructor
 
-  get level () {
+  constructor(level: LogLevel = LogLevels.ERROR) {
+    this.#level = level
+  }
+
+  // #endregion
+
+  // #region Getters & Setters
+
+  get level() {
     return this.#level
   }
 
-  // Methods //
+  // #endregion
 
-  reset () {
-    this.#level = null
-  }
-  off () {
+  // #region Public Methods
+
+  off() {
     this.#level = LogLevels.OFF
+    return this
   }
-  debug () {
+
+  debug() {
     this.#level = LogLevels.DEBUG
+    return this
   }
-  info () {
+
+  info() {
     this.#level = LogLevels.INFO
+    return this
   }
-  warn () {
+
+  warn() {
     this.#level = LogLevels.WARN
+    return this
   }
-  error () {
+
+  error() {
     this.#level = LogLevels.ERROR
+    return this
   }
+
+  // #endregion
 }
 
-export const LogConfig = new LogConfigClass()
+export const GlobalConfig = new LogConfig().debug()
