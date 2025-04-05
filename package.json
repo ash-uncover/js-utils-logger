@@ -1,6 +1,6 @@
 {
   "name": "@sol.ac/js-utils-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "aSH <ash.uncover@gmail.com>",
   "description": "javascript logger",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/jest": "29.5.14",
     "@types/node": "22.14.0",
-    "husky": "^9.1.7",
+    "husky": "9.1.7",
     "jest": "29.7.0",
     "ts-jest": "29.3.1",
     "typescript": "5.8.3"
