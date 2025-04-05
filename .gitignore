@@ -3,6 +3,7 @@ npm-debug.log*
 
 # Coverage directory
 __coverage__
+dist
 
 # Dependency directories
 node_modules
