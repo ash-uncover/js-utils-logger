@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ash-uncover/js-utils-logger"
+    "url": "git+https://github.com/ash-uncover/js-utils-logger.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
