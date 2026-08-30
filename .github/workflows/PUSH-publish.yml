@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: '22.x'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Cache node modules
         uses: actions/cache@master
