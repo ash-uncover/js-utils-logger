@@ -46,4 +46,6 @@ jobs:
         run: npm run test:coverage
 
       - name: publish
-        run: npm publish --access public
+        run: |
+          npm config delete //registry.npmjs.org/:_authToken
+          npm publish --access public
